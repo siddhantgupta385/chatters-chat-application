@@ -6,7 +6,7 @@ const ChatFeed = (props) => {
     const {chats,activeChat, userName,messages}=props;
 
     const chat = chats && chats[activeChat];
-
+    
     const renderReadReceipts = (message, isMyMessage) =>  chat.people.map((person, index) => person.last_read === message.id && (
         <div
           key={`read_${index}`}
@@ -48,13 +48,13 @@ const ChatFeed = (props) => {
     if(!chat) return 'Loading....';
     return(
         <div className="chat-feed">
-            <div className="chat-title-conatiner">
-                <div className="chat-title">{chat?.title}</div>
+            <div className="chat-title-container">
+                <div className="chat-title">{chat.title}</div>
                 <div className="chat-subtitle">{chat.people.map((person)=>` ${person.person.username}`)}</div>
             </div>
             {renderMessages()}
             <div style={{height:'100px'}}/>
-            <div className="message-form-conatiner">
+            <div className="message-form-container">
                 <MessageForm {...props} chatId={activeChat}/> 
             </div>
         </div>

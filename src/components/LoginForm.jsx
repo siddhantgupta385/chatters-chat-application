@@ -20,11 +20,11 @@ const LoginForm = () => {
       localStorage.setItem('password', password);
 
       window.location.reload();
-      setError('');
-    } catch (err) {
+     
+    } catch (error) {
       setError('Oops, incorrect credentials.');
     }
-  };
+  }
 
   return (
     <div className="wrapper">
