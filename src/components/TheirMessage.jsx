@@ -9,13 +9,13 @@ const TheirMessage =({lastMessage,message}) => {
 
                     />
                 )}
-                
+                 
 
-                {message?.attachements?.length>0
+                {message.attachments && message.attachments.length > 0
                         ?(
                             <img src={message.attachments[0].file} 
                             alt="message-attachment"
-                            className="meassge-image"
+                            className="message-image"
                             style={{marginLeft:isFirstMessageByuser? '4px':'48px'}} />
                         ):(
                             

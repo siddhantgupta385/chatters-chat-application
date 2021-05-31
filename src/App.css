@@ -182,6 +182,10 @@
     padding: 0px 12px;
     height: 100%;
   }
+  .error{
+    text-align: center;
+    color: #fdfdfd;
+  }
   
   .send-button {
     height: 42px;
